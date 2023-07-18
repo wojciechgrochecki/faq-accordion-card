@@ -8,10 +8,10 @@ export default function FaqAccordionCard({}) {
   return (
     <div
       className="grid w-[90%] max-w-[600px] grid-flow-row content-center pb-5
-     desktop:max-w-none desktop:grid-flow-col desktop:grid-cols-2 "
+      desktop:max-w-none desktop:grid-flow-col desktop:grid-cols-2 "
     >
       <div className="relative grid grid-rows-[5fr_3fr] place-items-center content-center bg-transparent pb-[10%] desktop:rounded-l-[2rem] desktop:bg-white">
-        <div className="absolute row-start-2 h-full w-full rounded-t-[2rem] bg-white"></div>
+        <div className="absolute row-start-2 h-full w-full rounded-t-[2rem] bg-primary-text-very-dark-desaturated-blue desktop:hidden"></div>
         <picture
           className="z-10 row-span-2 row-start-1 w-[70%]  translate-y-[3%]
           desktop:w-auto desktop:max-w-none desktop:translate-y-0"
@@ -29,7 +29,10 @@ export default function FaqAccordionCard({}) {
           </picture>
         </div>
       </div>
-      <div className=" flex w-full flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16 desktop:justify-center desktop:rounded-l-none">
+      <div
+        className=" flex w-full flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16 desktop:justify-center 
+      desktop:rounded-[2rem] desktop:rounded-l-none"
+      >
         <h2
           className="my-6 text-5xl font-bold text-primary-text-very-dark-desaturated-blue
         desktop:mt-0"
