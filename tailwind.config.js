@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "hsl(0, 0%, 100%)",
       primary: {
         text: {
           "very-dark-desaturated-blue": "hsl(238, 29%, 16%)",
@@ -19,7 +22,7 @@ export default {
           "dark-grayish-blue": "hsl(240, 6%, 50%)",
         },
         divider: {
-          "ligh-grayish-blue": "hsl(240, 5%, 91%)",
+          "light-grayish-blue": "hsl(240, 5%, 91%)",
         },
       },
     },
@@ -27,7 +30,14 @@ export default {
       normal: "400",
       bold: "700",
     },
-    extend: {},
+    extend: {
+      content: {
+        "arrow-down-icon": 'url("src/assets/images/icon-arrow-down.svg")',
+      },
+      screens: {
+        desktop: "1000px",
+      },
+    },
   },
   plugins: [],
 };
