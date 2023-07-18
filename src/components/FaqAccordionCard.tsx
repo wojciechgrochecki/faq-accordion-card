@@ -8,35 +8,46 @@ export default function FaqAccordionCard({}) {
   return (
     <div
       className="grid w-[90%] max-w-[600px] grid-flow-row content-center pb-5
-      desktop:max-w-none desktop:grid-flow-col desktop:grid-cols-2 "
+      desktop:h-fit  desktop:max-w-[900px] desktop:grid-flow-col desktop:grid-cols-2 
+       desktop:pb-0"
     >
-      <div className="relative grid grid-rows-[5fr_3fr] place-items-center content-center bg-transparent pb-[10%] desktop:rounded-l-[2rem] desktop:bg-white">
-        <div className="absolute row-start-2 h-full w-full rounded-t-[2rem] bg-primary-text-very-dark-desaturated-blue desktop:hidden"></div>
-        <picture
-          className="z-10 row-span-2 row-start-1 w-[70%]  translate-y-[3%]
-          desktop:w-auto desktop:max-w-none desktop:translate-y-0"
+      <div
+        className="
+        desktop:get-me-out { relative grid grid-rows-[5fr_3fr] place-items-center content-center 
+        bg-transparent bg-no-repeat pb-[10%] desktop:grid-rows-1 desktop:rounded-l-[2rem]
+        desktop:bg-white desktop:pb-0"
+      >
+        <div
+          className="absolute row-start-2 h-full w-full rounded-t-[2rem] bg-white
+         desktop:hidden"
+        ></div>
+        <img
+          src={illustrationWomanMobile}
+          alt=""
+          className="z-10 row-span-2 row-start-1 w-[70%] translate-y-[3%] desktop:hidden"
+        />
+        <img
+          src={illustrationBoxDesktop}
+          alt=""
+          className="desktop:animate-bounc hidden desktop:absolute desktop:block desktop:translate-x-[-120%]
+          desktop:translate-y-[15%]"
+        />
+        <div
+          className="absolute  flex h-fit w-full
+        translate-y-[50%] justify-center desktop:hidden"
         >
-          <source
-            media="(min-width:1000px)"
-            srcSet={illustrationWomanDesktop}
+          <img
+            src={bgPatternMobile}
+            alt=""
+            className="w-[70%] desktop:w-full"
           />
-          <img src={illustrationWomanMobile} alt="" />
-        </picture>
-        <div className="absolute mx-auto flex h-fit w-full translate-y-[50%] justify-center ">
-          <picture className="w-[70%]  ">
-            <source media="(min-width:1000px)" srcSet={bgPatternDesktop} />
-            <img src={bgPatternMobile} alt="" className="w-full" />
-          </picture>
         </div>
       </div>
       <div
-        className=" flex w-full flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16 desktop:justify-center 
-      desktop:rounded-[2rem] desktop:rounded-l-none"
+        className="flex w-full flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16  desktop:justify-center 
+      desktop:rounded-[2rem] desktop:rounded-l-none desktop:px-24 desktop:py-24 desktop:pl-0 desktop:text-lg"
       >
-        <h2
-          className="my-6 text-5xl font-bold text-primary-text-very-dark-desaturated-blue
-        desktop:mt-0"
-        >
+        <h2 className="w-full text-center text-5xl font-bold text-primary-text-very-dark-desaturated-blue desktop:mb-10 desktop:text-left">
           FAQ
         </h2>
         <div className="w-full border-b border-neutral-divider-light-grayish-blue py-5">
@@ -47,9 +58,9 @@ export default function FaqAccordionCard({}) {
           />
           <label
             htmlFor="ch1"
-            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue
+            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue transition-all transition-all
               after:transition-transform  after:duration-300 
-              after:content-arrow-down-icon peer-checked:font-bold peer-checked:after:-rotate-180"
+              after:content-arrow-down-icon hover:text-primary-text-soft-red peer-checked:font-bold peer-checked:after:-rotate-180"
           >
             How many team members can I invite?
           </label>
@@ -69,9 +80,9 @@ export default function FaqAccordionCard({}) {
           />
           <label
             htmlFor="ch2"
-            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue
+            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue transition-all
               after:transition-transform  after:duration-300 
-              after:content-arrow-down-icon peer-checked:font-bold peer-checked:after:-rotate-180"
+              after:content-arrow-down-icon hover:text-primary-text-soft-red peer-checked:font-bold peer-checked:after:-rotate-180"
           >
             What is the maximum file upload size?
           </label>
@@ -91,9 +102,9 @@ export default function FaqAccordionCard({}) {
           />
           <label
             htmlFor="ch3"
-            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue
+            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue transition-all
               after:transition-transform  after:duration-300 
-              after:content-arrow-down-icon peer-checked:font-bold peer-checked:after:-rotate-180"
+              after:content-arrow-down-icon hover:text-primary-text-soft-red peer-checked:font-bold peer-checked:after:-rotate-180"
           >
             How do I reset my password?
           </label>
@@ -113,9 +124,9 @@ export default function FaqAccordionCard({}) {
           />
           <label
             htmlFor="ch4"
-            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue
+            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue transition-all
               after:transition-transform  after:duration-300 
-              after:content-arrow-down-icon peer-checked:font-bold peer-checked:after:-rotate-180"
+              after:content-arrow-down-icon hover:text-primary-text-soft-red peer-checked:font-bold peer-checked:after:-rotate-180"
           >
             Can I cancel my subscription?
           </label>
@@ -135,9 +146,9 @@ export default function FaqAccordionCard({}) {
           />
           <label
             htmlFor="ch5"
-            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue
+            className="flex cursor-pointer flex-row items-center justify-between text-primary-text-very-dark-desaturated-blue transition-all
               after:transition-transform  after:duration-300 
-              after:content-arrow-down-icon peer-checked:font-bold peer-checked:after:-rotate-180"
+              after:content-arrow-down-icon hover:text-primary-text-soft-red peer-checked:font-bold peer-checked:after:-rotate-180"
           >
             Do you provide additional support?
           </label>
