@@ -15,7 +15,10 @@ function App() {
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a className=" text-white/90" href="#">
+        <a
+          className=" whitespace-nowrap text-white/90 hover:text-primary-text-soft-red"
+          href="#"
+        >
           Wojciech Grochecki
         </a>
         .
