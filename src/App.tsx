@@ -1,13 +1,14 @@
 import "./App.css";
 import FaqAccordionCard from "./components/FaqAccordionCard";
+import data from "../data.json";
 
 function App() {
   return (
     <div
-      className="grid h-fit min-h-full justify-items-center gap-y-5 bg-gradient-to-b 
-    from-primary-gradient-soft-violet to-primary-gradient-soft-blue desktop:place-items-center"
+      className="grid h-fit min-h-full justify-items-center bg-gradient-to-b 
+    from-primary-gradient-soft-violet to-primary-gradient-soft-blue desktop:content-center"
     >
-      <FaqAccordionCard />
+      <FaqAccordionCard faqData={data} />
     </div>
   );
 }
