@@ -14,7 +14,6 @@ interface FaqAccordionProps {
 }
 
 const FaqAccordionCard: FC<FaqAccordionProps> = ({ faqData }) => {
-  console.log(faqData);
   return (
     <div
       className="grid w-[90%] max-w-[600px] grid-flow-row content-center pb-5
@@ -22,9 +21,9 @@ const FaqAccordionCard: FC<FaqAccordionProps> = ({ faqData }) => {
        desktop:rounded-[2rem] desktop:pb-0 desktop:shadow-sm desktop:shadow-primary-gradient-soft-violet"
     >
       <div
-        className="
-        desktop:get-me-out { relative grid grid-rows-[5fr_3fr] place-items-center content-center 
-        bg-transparent bg-no-repeat pb-[10%] desktop:grid-rows-1 desktop:rounded-l-[2rem]
+        className="desktop:get-me-out relative grid
+        h-fit  grid-rows-[5fr_3fr]  place-items-center content-center bg-transparent 
+        bg-no-repeat pb-[10%] desktop:h-auto desktop:grid-rows-1 desktop:rounded-l-[2rem]
         desktop:bg-white desktop:pb-0"
       >
         <div
@@ -50,17 +49,17 @@ const FaqAccordionCard: FC<FaqAccordionProps> = ({ faqData }) => {
         </div>
       </div>
       <div
-        className="flex w-full flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16  desktop:justify-center 
+        className="flex w-full  flex-col items-center rounded-b-[2rem] bg-white px-7 pb-16   desktop:justify-center 
       desktop:rounded-[2rem] desktop:rounded-l-none desktop:px-24 desktop:py-24 desktop:pl-0 desktop:text-lg"
       >
-        <h2 className="w-full text-center text-5xl font-bold text-primary-text-very-dark-desaturated-blue desktop:mb-10 desktop:text-left">
+        <h2 className="w-full text-center text-5xl font-bold text-primary-text-very-dark-desaturated-blue desktop:mb-10 desktop:w-[90%] desktop:text-left">
           FAQ
         </h2>
         {faqData.map((item) => {
           return (
             <div
               key={item.id}
-              className="w-full border-b border-neutral-divider-light-grayish-blue py-5"
+              className="w-[90%] border-b border-neutral-divider-light-grayish-blue py-5"
             >
               <input
                 type="checkbox"
